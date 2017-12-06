@@ -28,15 +28,18 @@ table {
 	border-spacing: 0;
 }
 
-@font-face{font-family:'fs';src:url('fonts/fs_medium.otf')}
+@font-face{font-family:'fs';src:url('fonts/fs_light.otf')}
 
 body {
 	background: #eaedef;
 	font-family: "fs", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-size: 14pt;
+	line-height: 18pt;
 }
 
 h2 {
-	font-size: 20pt;
+	margin-top: 0px;
+	font-size: 24pt;
 }
 
 div#top {
@@ -120,7 +123,6 @@ div#headerillustration {
 }
 
 .pagebody {
-	width: 80%;
 	max-width: 1040px;
 	padding: 20px;
 	margin: 40px auto 40px;
@@ -161,8 +163,6 @@ div#ticker h1 {
 	float: left;
 	width: 50%;
 	padding: 20px;
-	font-size: 12pt;
-	line-height: 16pt;
 }
 
 .readmore {
@@ -173,60 +173,32 @@ div#ticker h1 {
 	height: 320px;
 }
 
+.columns {
+	max-width: 1040px;
+	margin: 40px auto 40px;
+}
+
 .textbox {
-	padding: 40px;
+	box-sizing: border-box;
+	width: 64%;
+	padding: 20px;
+	float: left;
+	background-color: #ffffff;
+	border: solid 1px #dedede;
+	border-radius: 3px;
+	margin-right: 3%;
+}
+
+.imgbox {
+	box-sizing: border-box;
+	width: 33%;
+	float: left;
+	background-color: #ffffff;
+	border: solid 1px #dedede;
+	border-radius: 3px;
 }
 
 .textbox img {
-	margin: auto;
-}
-
-div#footerwrapper {
-	padding: 40px;
-	margin: auto;	
-}
-
-div#footer {
-	height: 256px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-.footercontent {
-	box-sizing: border-box;
-	width: 33.33%;
-	float: left;
-	text-align: center;
-	padding: 20px;
-}
-
-div#comvalues {
-	height: 512px;
-}
-
-div#comstandards {
-	height: 512px;
-}
-
-div#prbot {
-	height: 512px;
-}
-
-div#sixbillion {
-	height: 512px;
-}
-
-div#nextgen {
-	height: 512px;
-	text-align: right;
-}
-
-div#faces {
-	height: 512px;
-}
-
-div#mission {
-	height: 1025px;
+    display: block;
+    margin: 0 auto;
 }
