@@ -1,0 +1,222 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face{font-family:'fs';src:url('fonts/fs_medium.otf')}
+
+body {
+	background: #eaedef;
+	font-family: "fs", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+div#top {
+	position: relative;
+	height: 100px;
+	background: #2E3E77;
+	color: #ffffff;
+	padding-right: 270px;
+}
+
+nav#navigation {
+	align-items: center;
+	margin-left: auto;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	list-style: none;
+	float: right;
+}
+
+.nav-item {
+	text-decoration: none;
+	color: silver;
+	text-transform: uppercase;
+	border-top: 4px solid transparent;
+	margin-right: 3px;
+	padding: 14px;
+	font-size: 20px;
+	vertical-align: top;
+}
+
+.mission {
+	margin-right: 3px;
+	padding: 14px;
+	vertical-align: top;
+	position: absolute;
+	bottom: 0;
+	right: 160;
+}
+
+.active {
+	border-top-color: #ffffff;
+	color: #ffffff;
+}
+
+div#top h1 {
+	font-size: 16pt;
+	padding-right: 40px;
+	padding-left: 40px;
+	padding-top: 20px;
+	display: inline-block;
+	float: right;
+}
+
+.header {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+div#headerillustration {
+	background: #2E3E77;
+	height: 320px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.pagebody {
+	width: 80%;
+	max-width: 1040px;
+	padding: 20px;
+	margin: 40px auto 40px;
+	background-color: #ffffff;
+	border: solid 1px #dedede;
+	border-radius: 3px;
+}
+
+.pagebody h1 {
+	margin-left: 80px;
+	margin-right: 80px;
+	line-height: 3em;
+	font-size: 18pt;
+}
+
+div#ticker {
+	height: 192px;
+}
+
+div#ticker h1 {
+	font-size: 16pt;
+	padding-right: 40px;
+	padding-left: 40px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.box {
+	margin: 20px;
+	border: solid 1px #dedede;
+	border-radius: 3px;
+}
+
+.productimg {
+	float: left;
+	width: 50%;
+}
+
+.productdesc {
+	box-sizing: border-box;
+	float: left;
+	width: 50%;
+	padding: 40px;
+}
+
+.productdesc p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.products {
+	height: 256px;
+}
+
+.textbox {
+	padding: 40px;
+}
+
+.textbox img {
+	margin: auto;
+}
+
+div#footerwrapper {
+	padding: 40px;
+	margin: auto;	
+}
+
+div#footer {
+	height: 256px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+h2 {
+	font-size: 16pt;
+}
+
+h3 {
+	font-size: 20pt;
+}
+
+.footercontent {
+	box-sizing: border-box;
+	width: 33.33%;
+	float: left;
+	text-align: center;
+	padding: 20px;
+}
+
+div#comvalues {
+	height: 512px;
+}
+
+div#comstandards {
+	height: 512px;
+}
+
+div#prbot {
+	height: 512px;
+}
+
+div#sixbillion {
+	height: 512px;
+}
+
+div#nextgen {
+	height: 512px;
+	text-align: right;
+}
+
+div#faces {
+	height: 512px;
+}
+
+div#mission {
+	height: 1025px;
+}
