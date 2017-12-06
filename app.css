@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -35,12 +35,26 @@ body {
 	font-family: "fs", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 
+h2 {
+	font-size: 20pt;
+}
+
 div#top {
 	position: relative;
 	height: 100px;
 	background: #2E3E77;
 	color: #ffffff;
 	padding-right: 270px;
+}
+
+div#top p{
+	text-decoration: none;
+	color: silver;
+	border-top: 4px solid transparent;
+	margin-right: 3px;
+	padding: 14px;
+	font-size: 20px;
+	vertical-align: top;
 }
 
 nav#navigation {
@@ -78,6 +92,12 @@ nav#navigation {
 	color: #ffffff;
 }
 
+.landing {
+	float: left;
+	text-transform: lowercase;
+	margin-left: 160px;
+}
+
 div#top h1 {
 	font-size: 16pt;
 	padding-right: 40px;
@@ -109,11 +129,10 @@ div#headerillustration {
 	border-radius: 3px;
 }
 
-.pagebody h1 {
-	margin-left: 80px;
-	margin-right: 80px;
-	line-height: 3em;
-	font-size: 18pt;
+hr {
+	margin: 40px 20px;
+	border: solid 1px #dedede;
+
 }
 
 div#ticker {
@@ -129,9 +148,7 @@ div#ticker h1 {
 }
 
 .box {
-	margin: 20px;
-	border: solid 1px #dedede;
-	border-radius: 3px;
+	margin: 28px;
 }
 
 .productimg {
@@ -143,16 +160,17 @@ div#ticker h1 {
 	box-sizing: border-box;
 	float: left;
 	width: 50%;
-	padding: 40px;
+	padding: 20px;
+	font-size: 12pt;
+	line-height: 16pt;
 }
 
-.productdesc p {
-	margin-top: 1em;
-	margin-bottom: 1em;
+.readmore {
+	font-size: 10pt;
 }
 
 .products {
-	height: 256px;
+	height: 320px;
 }
 
 .textbox {
@@ -174,14 +192,6 @@ div#footer {
 	padding-bottom: 20px;
 	padding-left: 30px;
 	padding-right: 30px;
-}
-
-h2 {
-	font-size: 16pt;
-}
-
-h3 {
-	font-size: 20pt;
 }
 
 .footercontent {
