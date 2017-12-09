@@ -7,45 +7,45 @@ html, body {
   padding: 0;
 }
 
-html {
-  background: #fafafa;
-  color: #222;
+#icon {
+  width: 400px;
+  margin: 100px auto;
+  position: relative;
 }
 
-::selection {
-  background: #fff;
-  color: #000;
+img {
+  max-width: 100%;
 }
-::-moz-selection {
-  background: #fff;
-  color: #000;
+.icon-arrows img {
+  position: absolute;
+  cursor: pointer;
+  width: 160px;
 }
-
-body {
-  display: flex;
-  justify-content: center; /* align horizontal */
-  align-items: center; /* align vertical */
-  height: 100vh;
-  overflow: hidden;
+.icon-arrows img:hover {
+  animation: bounceIn 0.7s infinite;
 }
-
-h1 {
-  font-family: 'NimbusSanLBold', 'Helvetica Neue', sans-serif;
-  font-size: 4em;
-  padding: 1em;
-  width: 100%;
+.icon-arrows img#hive {
+  top: -60px;
+  left: 120px;
 }
-h1:hover {
-  animation: bounceIn 0.5s infinite;
-}
-
-#background {
-  position: fixed;
-  top: 0;
+.icon-arrows img#mesh {
+  bottom: 70px;
   left: 0;
+}
+.icon-arrows img#compass {
+  bottom: 70px;
   right: 0;
-  bottom: 0;
+}
+#text-ring {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  z-index: 0;
+  width: 310px;
+}
+#icon-base {
   z-index: -1;
+  position: relative;
 }
 
 @keyframes bounceIn {

@@ -1,102 +1,73 @@
-const color = '#222';
-const nPoints = 40;
-const velocity = 3;
-const radius = 3;
-const nearby = 200;
-const points = [];
+const P_WOMEN = 0.36;
+const P_MINOR = 0.085;
+const teamEl = document.getElementById('the-team');
+const TYPES = {
+  employee: {
+    per_row: 20,
+    max_n: 25000,
+    shown: 0
+  },
+  contractor: {
+    per_row: 40,
+    max_n: 10000,
+    shown: 0
+  }
+};
 
-var edges = [];
-var drawnEdges = [];
-var elem = document.getElementById('background'),
-    width = window.innerWidth,
-    height = window.innerHeight;
-var two = new Two({
-  width: width,
-  height: height,
-  type: Two.Types.canvas
-}).appendTo(elem);
-
-function makePoint(id, x, y) {
-  var circle = two.makeCircle(x, y, radius);
-  circle.fill = color;
-  circle.noStroke();
-  return {
-    id: id,
-    pt: circle,
-    vel: {
-      x: (Math.random() * velocity) - velocity/2,
-      y: (Math.random() * velocity) - velocity/2
-    }
-  };
-}
-
-for (var i=0; i<nPoints; i++){
-  points.push(makePoint(
-    i,
-    Math.random() * width,
-    Math.random() * height
-  ));
-}
-
-function bound(val, min, max) {
-  return Math.min(Math.max(val, min), max);
-}
-
-function dist(a, b) {
-  var ax = a.pt.translation.x,
-      ay = a.pt.translation.y,
-      bx = b.pt.translation.x,
-      by = b.pt.translation.y;
-  return Math.sqrt(Math.pow(ax - bx, 2) + Math.pow(ay - by, 2));
-}
-
-function _dist(a, b) {
-  return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2));
-}
-
-
-two.bind('update', function() {
-  edges = [];
-  points.map(p => {
-    // apply velocity
-    p.pt.translation.x = bound(p.vel.x + p.pt.translation.x, 0, width);
-    p.pt.translation.y = bound(p.vel.y + p.pt.translation.y, 0, height);
-
-    // bounce
-    if (p.pt.translation.x >= width || p.pt.translation.x <= 0) {
-      p.vel.x *= -1;
-    }
-    if (p.pt.translation.y >= height || p.pt.translation.y <= 0) {
-      p.vel.y *= -1;
-    }
-
-    // find nearby points
-    var half = Math.ceil(points.length/2);
-    points.slice(0, half).map(p_ => {
-      if (dist(p, p_) <= nearby) {
-        edges.push({
-          x1: p.pt.translation.x,
-          y1: p.pt.translation.y,
-          x2: p_.pt.translation.x,
-          y2: p_.pt.translation.y
-        });
+function makeRow(type) {
+  if (TYPES[type].shown < TYPES[type].max_n) {
+    var row = document.createElement('li');
+    for (var i=0; i<TYPES[type].per_row; i++) {
+      var img = document.createElement('img');
+      img.style.width = `${100/TYPES[type].per_row}%`;
+      img.src = '../images/default_hex.png';
+      if (type == 'employee') {
+        var w = Math.random(),
+            m = Math.random();
+        if (w < P_WOMEN && m < P_MINOR) {
+          img.src = '../images/filled_blue_hex.png';
+        } else if (w < P_WOMEN) {
+          img.src = '../images/filled_hex.png';
+        } else if (m < P_MINOR) {
+          img.src = '../images/blue_hex.png';
+        }
       }
-    });
-  });
+      row.appendChild(img);
+    }
+    teamEl.appendChild(row);
+    TYPES[type].shown += TYPES[type].per_row;
+    return true;
+  }
+  return false;
+}
 
-  drawnEdges.map(l => l.remove());
-  drawnEdges = [];
-  edges.map(e => {
-    var line = two.makeLine(e.x1, e.y1, e.x2, e.y2);
-    line.stroke = color;
-    line.opacity = 500/Math.pow(_dist({
-      x: e.x1,
-      y: e.y1
-    }, {
-      x: e.x2,
-      y: e.y2
-    }), 2);
-    line.linewidth = 2;
-    drawnEdges.push(line);
+// initial set of rows
+for (var i=0; i<20; i++) {
+  makeRow('employee');
+}
+
+// generate new rows of employees/contractors
+// when scrolling to the bottom
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      for (var i=0; i<10; i++) {
+        if (!makeRow('employee')) {
+          makeRow('contractor');
+        }
+      }
+    }
+};
+
+// show person bio on click
+Array.from(document.getElementsByClassName('leader-profile')).forEach(el => {
+  el.addEventListener('click', () => {
+    Array.from(document.querySelectorAll('.leader-bio')).forEach(e => {
+      e.style.display = 'none';
+    });
+    document.querySelector(`.leader-bio[data-name=${el.dataset.name}]`).style.display = 'block';
   });
-}).play();
+});
+
+document.getElementById('meet-the-team').addEventListener('click', () => {
+  teamEl.style.display = 'block';
+});
