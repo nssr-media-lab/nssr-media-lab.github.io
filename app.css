@@ -176,8 +176,17 @@ hr {
 
 }
 
-#ticker {
-	height: 192px;
+#newsticker {
+	height: 120px;
+}
+
+.ticker {
+	margin-top: 40px;
+}
+
+.ticker figcaption {
+	margin-left: 20px;
+	font-size: 20pt;
 }
 
 .productimg {

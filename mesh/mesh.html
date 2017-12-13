@@ -32,12 +32,77 @@
 	</div>
 
 	<div class="pagebody">
-		<div id="ticker">
-			<h1>News ticker will go here.</h1>
+		<h2>Highlights</h2>
+	<div id="newsticker" class="centertext">
+    <figure class="ticker">
+      <img src="../images/security.png" style="width:16%; float:left;">
+      <figcaption style="float:left; width:80%">In response to complaints of misleading avatars in our VR hangout spaces, we're now offering user verification. Become Authentic today!</figcaption></figure> 
+    <figure class="ticker">
+      <img src="../images/moneybag.png" style="width:16%; float:left">
+      <p>
+        <figcaption style="float:left; width:80%">
+        Macy's is now carrying Zuckerwear tees and hoodies in 150 locations across 30 states
+        </figcaption>
+      </p> </figure> 
+    <figure class="ticker">
+      <img src="../images/church.png" style="width:16%; float:left">
+      <p>
+        <figcaption style="float:left; width: 80%">
+        Religion headline TK
+        </figcaption>
+      </p> </figure> 
+    <figure class="ticker">
+      <img src="../images/health.png" style="width:16%; float:left">
+      <p>
+        <figcaption style="float:left; width:80%">
+        Facebook Health: Give medical professionals access to your entire medical history by logging into your Facebook Health account at the clinic
+        </figcaption>
+      </p> </figure> 
+    <figure class="ticker">
+      <img src="../images/law.png" style="width:16%; float:left">
+      <p>
+        <figcaption style="float:left; width:80%">
+        We have extended our partnership with homeland security to provide BackCheck services at 12 more border crossings
+        </figcaption>
+      </p> </figure> 
+    <figure class="ticker">
+      <img src="../images/civics.png" style="width:16%; float:left">
+      <p>
+        <figcaption style="float:left; width:80%">
+        Annie, get your gun... faster than ever when you use Facebook to register for a gun permit!
+        </figcaption>
+      </p> </figure> 
+    <figure class="ticker">
+      <img src="../images/education.png" style="width:16%; float:left">
+      <p>
+        <figcaption style="float:left; width:80%">
+        Need help discovering your passion? Our career suggestion bot can recommend your ideal job based on your unique data
+        </figcaption>
+      </p> </figure>
+  
+    <script>
+    
+      var slide = 0;
+      carousel();
+    
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("ticker");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        slide++;
+        if (slide > x.length) {slide = 1}
+        x[slide-1].style.display = "block";
+        setTimeout(carousel, 3000);
+      }
+    
+    </script>
 		</div>
+</div>
 
-		<hr>
-
+<div class="pagebody">
+	<h2>Products</h2>
 		<div class="products">
 			<div class="productimg">
 				<a href="fb4i.html"><img src="../images/fb4i.jpg" style="height: 100%; width: 100%; object-fit: cover"></a>
