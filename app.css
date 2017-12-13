@@ -48,12 +48,24 @@ h2 {
 	font-size: 24pt;
 }
 
+a {
+	color: #3b5998;
+	text-decoration: none;
+}
+
 #top {
 	position: relative;
 	height: 100px;
 	background: #2E3E77;
 	color: #ffffff;
 	padding-right: 270px;
+}
+
+#bottom {
+	position: relative;
+	height: 40px;
+	background: #2E3E77;
+	color: #ffffff;
 }
 
 #top p{
@@ -181,7 +193,14 @@ hr {
 }
 
 .productdesc h2 {
-	margin: 0px;
+	color: #3b5998;
+	margin: 0;
+	font-weight: bold;
+}
+
+.productdesc p {
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 .readmore {
@@ -189,7 +208,7 @@ hr {
 }
 
 .products {
-	height: 320px;
+	height: 280px;
 	margin: 0 30px 0 30px;
 }
 
@@ -291,7 +310,7 @@ hr {
   margin: 0;
   padding: 0;
   display: inline-block;
-  margin-top: -5px;
+  margin-top: 0;
 }
 
 .leader-profile {

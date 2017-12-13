@@ -11,6 +11,8 @@ html, body {
   width: 400px;
   margin: 100px auto;
   position: relative;
+  z-index: 1;
+  margin-top: -550px;
 }
 
 img {
