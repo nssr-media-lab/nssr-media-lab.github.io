@@ -28,11 +28,9 @@ table {
 	border-spacing: 0;
 }
 
-@font-face{font-family:'fs';src:url('fonts/fs_light.otf')}
-
 body {
 	background: #eaedef;
-	font-family: "fs", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: freight-sans-pro;
 	font-size: 14pt;
 	line-height: 18pt;
 }
@@ -46,6 +44,7 @@ h1 {
 h2 {
 	margin: 30px;
 	font-size: 24pt;
+	font-weight: normal;
 }
 
 a {
@@ -138,6 +137,7 @@ nav#navigation {
 	height: 320px;
 	text-align: center;
 	color: #ffffff;
+	overflow: hidden;
 }
 
 .pagebody {
@@ -204,7 +204,6 @@ hr {
 .productdesc h2 {
 	color: #3b5998;
 	margin: 0;
-	font-weight: bold;
 }
 
 .productdesc p {
