@@ -370,7 +370,11 @@ hr {
 #meet-the-team {
   border: 1px solid #111;
   display: block;
-  margin: 6em auto;
+  margin: 6em auto 2em auto;
   padding: 1em 2em;
   cursor: pointer;
+}
+#team-key {
+  margin: 0 auto;
+  display: block;
 }
