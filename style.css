@@ -2,17 +2,23 @@
   box-sizing: border-box;
 }
 
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
 #icon {
+  transform: scale(1.1);
   width: 400px;
-  margin: 100px auto;
+  margin: 130px auto;
   position: relative;
   z-index: 1;
-  margin-top: -550px;
 }
 
 img {
