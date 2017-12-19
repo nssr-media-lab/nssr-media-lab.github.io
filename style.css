@@ -15,8 +15,8 @@ html, body {
 
 #icon {
   transform: scale(1.1);
-  width: 400px;
-  margin: 130px auto;
+  width: 440px;
+  margin: 180px auto;
   position: relative;
   z-index: 1;
 }
@@ -27,29 +27,29 @@ img {
 .icon-arrows img {
   position: absolute;
   cursor: pointer;
-  width: 160px;
+  width: 176px;
 }
 .icon-arrows img:hover {
   animation: bounceIn 0.7s infinite;
 }
 .icon-arrows img#hive {
-  top: -60px;
-  left: 120px;
+  top: -66px;
+  left: 132px;
 }
 .icon-arrows img#mesh {
-  bottom: 70px;
+  bottom: 77px;
   left: 0;
 }
 .icon-arrows img#compass {
-  bottom: 70px;
+  bottom: 77px;
   right: 0;
 }
 #text-ring {
   position: absolute;
   top: 0;
-  left: 50px;
+  left: 55px;
   z-index: 0;
-  width: 310px;
+  width: 341px;
 }
 #icon-base {
   z-index: -1;
